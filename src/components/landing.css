@@ -1,5 +1,5 @@
 body{
-    min-height:700px;
+    min-height:900px;
 }
 .landing-logo{
     top:0;
@@ -28,7 +28,7 @@ body{
     font-size:25px;
     text-align:left;
     margin-left:10px;
-    margin-top:80px;
+    margin-top:30px;
     line-height:32px;
 }
 .taskoo-word{
@@ -36,10 +36,13 @@ body{
     font-style:none;
     color: rgb(236, 111, 66);
 }
+.container{
+    margin-top:-30px;
+}
 .taskboo-tagline{
     color:grey;
     margin-left:10px;
-    margin-top:300px;
+    margin-top:30px;
     text-align:left;
     font-size:15px;
     font-weight:bold;
@@ -50,14 +53,19 @@ body{
     width:35px;
     cursor:pointer;
     margin-top:40px;
-    left:0;
-    margin-left:-940px;
+    display:flex;
+    align-items:left;
+    justify-content:left;
+    margin-left:10px;
+    
 }
 .play-button-desc{
     font-weight:bold;
     font-size:13px;
-    margin-left:-830px;
     margin-top:-45px;
+    align-items:left;
+    justify-content:left;
+    margin-left:-640px;
     
 }
 span{
@@ -79,11 +87,11 @@ span{
     font-size:17px;
     border-radius: 20px 20px 20px 20px;
     justify-content:center;
-    align-items:left;
+    align-items:center;
     margin-top:20px;
     border:none;
     transition: transform 0.2s;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); */
 }
 .landing-page-btn:hover{
     transform:scale(1.1);

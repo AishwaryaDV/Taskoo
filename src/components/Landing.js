@@ -1,20 +1,29 @@
 import React from 'react'
 import './landing.css'
 import PlayButton from '../assets/play-button.png'
-import {useEffect} from 'react'
+import {useEffect, useRef} from 'react'
+import lottie from 'lottie-web'
 import {useNavigate} from 'react-router-dom'
 
 const Landing = (props) => {
 
     const navigate= useNavigate();
+    const container= useRef(null);
 
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-          window.removeEventListener('scroll', handleScroll);
-        };
-      }, []);
-    
+    useEffect(()=>{
+      const anim= lottie.loadAnimation({
+        container: container.current,
+        renderer:'svg',
+        loop:true,
+        autoplay:true,
+        animationData: require('./woman.json')
+      });
+      return ()=>{
+        anim.destroy();
+      };
+
+    },[])
+
       const handleScroll = () => {
         const header = document.getElementById('header');
         const sticky = header.offsetTop;
@@ -25,6 +34,13 @@ const Landing = (props) => {
           header.classList.remove('sticky');
         }
       };
+
+      useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, []);
        
   return (
     <div>
@@ -32,6 +48,7 @@ const Landing = (props) => {
         <div className="landing-logo">Taskoo</div>
         </header>
         <div className="taskoo-header">Manage your daily tasks & everything <br/> with <span style={{display:'inline'}} className="taskoo-word">taskoo</span></div>
+        <div className="container" ref={container}></div>
         <div className="taskboo-tagline">When you're overwhelmed by the amount of work you have <br></br>on your plate, stop and rethink.</div>
         <img className="play-button" src={PlayButton} alt="play button"/>
         <div className="play-button-desc">
