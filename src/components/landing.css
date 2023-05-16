@@ -1,0 +1,90 @@
+body{
+    min-height:700px;
+}
+.landing-logo{
+    top:0;
+    left:0;
+    position:fixed;
+    margin-left:10px;
+    margin-top:10px;
+    font-weight:bold;
+    font-size:17px;
+}
+#header{
+    background-color: white;
+    padding: 25px;
+    transition: background-color 0.3s ease;
+  }
+  #header.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+.taskoo-header{
+    font-weight:bold;
+    font-size:25px;
+    text-align:left;
+    margin-left:10px;
+    margin-top:80px;
+    line-height:32px;
+}
+.taskoo-word{
+    text-decoration:underline;
+    font-style:none;
+    color: rgb(236, 111, 66);
+}
+.taskboo-tagline{
+    color:grey;
+    margin-left:10px;
+    margin-top:300px;
+    text-align:left;
+    font-size:15px;
+    font-weight:bold;
+    line-height:18px;
+}
+.play-button{
+    height:35px;
+    width:35px;
+    cursor:pointer;
+    margin-top:40px;
+    left:0;
+    margin-left:-940px;
+}
+.play-button-desc{
+    font-weight:bold;
+    font-size:13px;
+    margin-left:-830px;
+    margin-top:-45px;
+    
+}
+span{
+    display:block;
+    line-height:17px;
+    color:grey;
+}
+.span-element{
+    margin-left:60px;
+    color: rgb(236, 111, 66);
+}
+.landing-page-btn{
+    height:45px;
+    width:160px;
+    cursor:pointer;
+    background-color:rgb(236, 111, 66);
+    color:white;
+    font-weight:bold;
+    font-size:17px;
+    border-radius: 20px 20px 20px 20px;
+    justify-content:center;
+    align-items:left;
+    margin-top:20px;
+    border:none;
+    transition: transform 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+.landing-page-btn:hover{
+    transform:scale(1.1);
+}
