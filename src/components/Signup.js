@@ -1,12 +1,15 @@
 import React from 'react'
 import './signup.css'
 import { useState, useEffect, useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 import lottie from 'lottie-web'
+import Footer from './Footer'
 
 const Signup = () => {
     const [isChecked, setIsChecked]= useState(false);
     const [isSignup, setIsSignup]= useState(true);
     const container= useRef(null);
+    const navigate= useNavigate();
 
     const handleCheckboxChange=()=>{
         setIsChecked(true);
@@ -29,11 +32,32 @@ const Signup = () => {
   
       },[])
 
+    const handleScroll = () => {
+        const header = document.getElementById('header');
+        const sticky = header.offsetTop;
+    
+        if (window.pageYOffset > sticky) {
+          header.classList.add('sticky');
+        } else {
+          header.classList.remove('sticky');
+        }
+      };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, []);
+
   return (
+    <>
     <div className="signup-login-page">
         {isSignup ? (
             <div className="signup-content">
-            <div className="signup-logo">Taskoo</div>
+            <header id="header">
+                <div className="signup-logo">Taskoo</div>
+            </header>
             <div className="signup-header">Create your account & sign up</div>
             <br/>
             <form>
@@ -57,12 +81,15 @@ const Signup = () => {
                     <label htmlFor="myCheckbox">I agree to all terms & policy</label>
                 </div>
                 <button className="signup-btn">Sign up</button>
+                <button onClick={()=>navigate("/overview")}>Testing</button>
             </form>
             <a href="#" className="login-link" onClick={toggleForm}>Already have an account? Login</a>
         </div>
         ) : (
         <div className="login-content">
-        <div className="signup-logo">Taskoo</div>
+        <header id="header">
+            <div className="signup-logo">Taskoo</div>
+        </header>
         <div className="login-header">Login to existing account</div>
         <br/>
         <form>
@@ -81,6 +108,7 @@ const Signup = () => {
                 <label htmlFor="myCheckbox">I agree to all terms & policy</label>
             </div>
             <button className="login-btn">Log up</button>
+            <button onClick={()=>navigate("/overview")}>Testing</button>
         </form>
         <a href="#" className="signup-link" onClick={toggleForm}>Don't have an account? Sign up</a>
     </div>)}
@@ -89,6 +117,8 @@ const Signup = () => {
         <div className="signup-container" ref={container}></div>
     </div>
     </div>
+    <Footer/>
+    </>
   )
 }
 

@@ -1,5 +1,5 @@
 body{
-    min-height:900px;
+    min-height:2000px;
 }
 .landing-logo{
     top:0;
@@ -27,7 +27,7 @@ body{
     font-weight:bold;
     font-size:25px;
     text-align:left;
-    margin-left:10px;
+    margin-left:20px;
     margin-top:30px;
     line-height:32px;
 }
@@ -35,14 +35,15 @@ body{
     text-decoration:underline;
     font-style:none;
     color: rgb(236, 111, 66);
+    font-size:25px;
 }
 .container{
     margin-top:-30px;
 }
 .taskboo-tagline{
     color:grey;
-    margin-left:10px;
-    margin-top:30px;
+    margin-left:20px;
+    margin-top:-40px;
     text-align:left;
     font-size:15px;
     font-weight:bold;
@@ -56,21 +57,21 @@ body{
     display:flex;
     align-items:left;
     justify-content:left;
-    margin-left:10px;
+    margin-left:20px;
     
 }
 .play-button-desc{
     font-weight:bold;
-    font-size:13px;
     margin-top:-45px;
     align-items:left;
     justify-content:left;
-    margin-left:-640px;
-    
+    margin-left:20px;
+    font-size:10px;
 }
+
 span{
     display:block;
-    line-height:17px;
+    line-height:5px;
     color:grey;
 }
 .span-element{
@@ -88,11 +89,20 @@ span{
     border-radius: 20px 20px 20px 20px;
     justify-content:center;
     align-items:center;
-    margin-top:20px;
+    margin-top:0px;
     border:none;
     transition: transform 0.2s;
     /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); */
 }
 .landing-page-btn:hover{
     transform:scale(1.1);
+}
+.container{
+    height:700px;
+    width:100%;
+   margin-right:100px;
+   margin-top:-50px;
+   align-items:center;
+   justify-content:center;
+   display:flex;
 }
