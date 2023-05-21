@@ -53,7 +53,7 @@ const Overview = () => {
 
   return (
     <div className="overview-section">
-        <Sidebar />
+       <div className="overview-sidebar-section"> <Sidebar /></div>
         <div className="categories-section">
            <div className="categories-upper-section">
                 <div className="work-section">

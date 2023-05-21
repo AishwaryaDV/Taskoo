@@ -1,5 +1,5 @@
 body{
-    min-height:1500px;
+    min-height:1200px;
 }
 .landing-logo{
     top:0;
@@ -9,6 +9,12 @@ body{
     margin-top:10px;
     font-weight:bold;
     font-size:17px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+.landing-logo:hover{
+    transform:scale(1.1);
+    color: rgb(236, 111, 66);
 }
 #header{
     background-color: white;
@@ -89,10 +95,11 @@ span{
     border-radius: 20px 20px 20px 20px;
     justify-content:center;
     align-items:center;
-    margin-top:0px;
+    margin-top:30px;
     border:none;
     transition: transform 0.2s;
-    margin-bottom:-50px;
+    padding:0;
+    margin-bottom:-20px;
     /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); */
 }
 .landing-page-btn:hover{

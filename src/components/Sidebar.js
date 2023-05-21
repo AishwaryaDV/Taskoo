@@ -17,7 +17,9 @@ const Sidebar = () => {
   return (
     <div>
         <div className="sidebar-section">
-        <div className="landing-logo">Taskoo</div>
+        <header id="header">
+        <div className="landing-logo" onClick={()=>navigate("/")}>Taskoo</div>
+        </header>
         <div className="main-sidebar-items">
             <span onClick={()=>navigate("/overview")}><BsHouseGear className="overview-icon" size={20} color="grey" />Overview</span>
             <span><ImFilesEmpty className="overview-icon" size={20} color="grey" />Projects</span>
