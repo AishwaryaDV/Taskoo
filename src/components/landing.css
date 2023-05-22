@@ -1,5 +1,13 @@
 body{
-    min-height:1200px;
+    min-height:2000px;
+}
+.github-icon{
+    position:fixed;
+    top:0;
+    right:0;
+    margin-top:10px;
+    margin-right:10px;
+    cursor: pointer;
 }
 .landing-logo{
     top:0;
@@ -11,30 +19,17 @@ body{
     font-size:17px;
     transition: transform 0.3s;
     cursor: pointer;
+
 }
 .landing-logo:hover{
     transform:scale(1.1);
-    color: rgb(236, 111, 66);
 }
-#header{
-    background-color: white;
-    padding: 25px;
-    transition: background-color 0.3s ease;
-  }
-  #header.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 100;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
-
 .taskoo-header{
     font-weight:bold;
     font-size:25px;
     text-align:left;
     margin-left:10px;
-    margin-top:10px;
+    margin-top:60px;
     line-height:32px;
 }
 .taskoo-word{
@@ -99,7 +94,7 @@ span{
     border:none;
     transition: transform 0.2s;
     padding:0;
-    margin-bottom:-20px;
+    margin-bottom:50px;
     /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); */
 }
 .landing-page-btn:hover{

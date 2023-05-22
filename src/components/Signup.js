@@ -33,30 +33,12 @@ const Signup = () => {
   
       },[])
 
-    const handleScroll = () => {
-        const header = document.getElementById('header');
-        const sticky = header.offsetTop;
-    
-        if (window.pageYOffset > sticky) {
-          header.classList.add('sticky');
-        } else {
-          header.classList.remove('sticky');
-        }
-      };
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-          window.removeEventListener('scroll', handleScroll);
-        };
-      }, []);
-
   return (
     <>
     <div className="signup-login-page">
         {isSignup ? (
             <div className="signup-content">
-            <header id="header">
+            <header>
                 <div className="signup-logo" onClick={()=>navigate("/")}>Taskoo</div>
             </header>
             <div className="signup-header">Create your account & sign up</div>

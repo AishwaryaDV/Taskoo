@@ -64,15 +64,15 @@ body{
     padding-top:20px;
 }
 .container1 {
-    height:400px;
-    width:400px;
+    height:380px;
+    width:360px;
     align-items:center;
     justify-content:center;
     display:flex;
     padding:0;
     cursor: pointer;
     margin-top:-70px;
-    margin-left:80px;
+    margin-left:100px;
 }
 .container3 {
     height:460px;

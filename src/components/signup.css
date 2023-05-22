@@ -1,19 +1,8 @@
 body{
     min-height:1200px;
 }
-#header{
-    background-color: white;
-    padding: 25px;
-    transition: background-color 0.3s ease;
-  }
-  #header.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 100;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
-  .signup-container{
+
+.signup-container{
    margin-top:35px;
    width:600px;
    height:600px;
