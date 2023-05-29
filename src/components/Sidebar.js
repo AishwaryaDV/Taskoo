@@ -21,15 +21,15 @@ const Sidebar = () => {
         <div className="landing-logo" onClick={()=>navigate("/")}>Taskoo</div>
         </header>
         <div className="main-sidebar-items">
-            <span onClick={()=>navigate("/overview")}><BsHouseGear className="overview-icon" size={20} color="grey" />Overview</span>
-            <span><ImFilesEmpty className="overview-icon" size={20} color="grey" />Projects</span>
-            <span onClick={()=>navigate("/notes")}><BsChatLeftHeart className="overview-icon" size={20} color="grey" />Notes</span>
-            <span><TfiStatsUp className="overview-icon" size={20} color="grey"/>Stats</span>
-            <span><SlCalender className="overview-icon" size={20} color="grey"/>Calender</span>
+            <span className="sidebar-icons" onClick={()=>navigate("/overview")}><BsHouseGear className="overview-icon" size={20} />Overview</span>
+            <span className="sidebar-icons" onClick={()=>navigate("/projects")}><ImFilesEmpty className="overview-icon" size={20} />Projects</span>
+            <span className="sidebar-icons" onClick={()=>navigate("/notes")}><BsChatLeftHeart className="overview-icon" size={20} />Notes</span>
+            <span className="sidebar-icons" onClick={()=>navigate("/stats")}><TfiStatsUp className="overview-icon" size={20} />Stats</span>
+            <span className="sidebar-icons" onClick={()=>navigate("/calender")}><SlCalender className="overview-icon" size={20} />Calender</span>
         </div>
         <div className="extra-sidebar-items">
-            <span><FiSettings className="overview-icon" size={20} color="grey"/>Settings</span>
-            <span><BiExit className="overview-icon" size={20} color="grey"/>Log out</span>
+            <span className="sidebar-icons"><FiSettings className="overview-icon" size={20} />Settings</span>
+            <span className="sidebar-icons"><BiExit className="overview-icon" size={20} />Log out</span>
         </div>
         </div>
     </div>

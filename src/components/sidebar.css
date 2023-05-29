@@ -33,6 +33,12 @@ span{
     margin-right:10px;
     padding:0;
 }
+.sidebar-icons{
+    color:grey;
+}
+.sidebar-icons:hover{
+    color:black;
+}
 #header{
     background-color: white;
     padding: 25px;
