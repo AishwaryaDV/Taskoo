@@ -8,10 +8,25 @@ import {SlCalender} from 'react-icons/sl'
 import {FiSettings} from 'react-icons/fi'
 import {BiExit} from 'react-icons/bi'
 import {useNavigate} from 'react-router-dom'
+import {useState} from 'react'
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
+import './calender.css'
+
 
 const Sidebar = () => {
    
     const navigate= useNavigate();
+    const [date, setDate] = useState(new Date());
+    const [isOpen, setIsOpen] = useState(false);
+  
+    const onChange = (selectedDate) => {
+      setDate(selectedDate);
+    };
+  
+    const toggleCalendar = () => {
+      setIsOpen(!isOpen);
+    };
 
     
   return (
@@ -25,7 +40,17 @@ const Sidebar = () => {
             <span className="sidebar-icons" onClick={()=>navigate("/projects")}><ImFilesEmpty className="overview-icon" size={20} />Projects</span>
             <span className="sidebar-icons" onClick={()=>navigate("/notes")}><BsChatLeftHeart className="overview-icon" size={20} />Notes</span>
             <span className="sidebar-icons" onClick={()=>navigate("/stats")}><TfiStatsUp className="overview-icon" size={20} />Stats</span>
-            <span className="sidebar-icons" onClick={()=>navigate("/calender")}><SlCalender className="overview-icon" size={20} />Calender</span>
+            
+            <div className="calendar-container">
+            <span className="sidebar-icons" onClick={toggleCalendar}><SlCalender className="overview-icon" size={20} />Calender</span>
+            {isOpen && (
+              <div className="calendar-popup">
+                <Calendar onChange={onChange} value={date} />
+              </div>
+            )}
+          </div>
+
+
         </div>
         <div className="extra-sidebar-items">
             <span className="sidebar-icons"><FiSettings className="overview-icon" size={20} />Settings</span>

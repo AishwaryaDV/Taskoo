@@ -5,7 +5,6 @@ import Overview from './components/Overview';
 import Notes from './components/Notes';
 import Projects from './components/Projects';
 import Stats from './components/Stats';
-import Calender from './components/Calender';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 function App() {
@@ -19,7 +18,6 @@ function App() {
           <Route path="/notes" element={<Notes/>} />
           <Route path="/projects" element={<Projects/>} />
           <Route path="/stats" element={<Stats/>} />
-          <Route path="/calender" element={<Calender/>} />
         </Routes>
       </Router>
       
