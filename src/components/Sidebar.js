@@ -11,7 +11,6 @@ import {useNavigate} from 'react-router-dom'
 import {useState} from 'react'
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
-import './calender.css'
 
 
 const Sidebar = () => {
@@ -40,20 +39,17 @@ const Sidebar = () => {
             <span className="sidebar-icons" onClick={()=>navigate("/projects")}><ImFilesEmpty className="overview-icon" size={20} />Projects</span>
             <span className="sidebar-icons" onClick={()=>navigate("/notes")}><BsChatLeftHeart className="overview-icon" size={20} />Notes</span>
             <span className="sidebar-icons" onClick={()=>navigate("/stats")}><TfiStatsUp className="overview-icon" size={20} />Stats</span>
-            
             <div className="calendar-container">
             <span className="sidebar-icons" onClick={toggleCalendar}><SlCalender className="overview-icon" size={20} />Calender</span>
             {isOpen && (
               <div className="calendar-popup">
-                <Calendar onChange={onChange} value={date} />
+                <Calendar showNavigation={true} onChange={onChange} value={date} />
               </div>
             )}
-          </div>
-
-
-        </div>
-        <div className="extra-sidebar-items">
+            </div>
             <span className="sidebar-icons"><FiSettings className="overview-icon" size={20} />Settings</span>
+          </div>
+        <div className="extra-sidebar-items">
             <span className="sidebar-icons"><BiExit className="overview-icon" size={20} />Log out</span>
         </div>
         </div>
