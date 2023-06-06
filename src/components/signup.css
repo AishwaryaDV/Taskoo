@@ -1,6 +1,15 @@
 body{
     min-height:1200px;
 }
+.taskoo-icon{
+    position:fixed;
+    cursor:pointer;
+    top:0;
+    left:0;
+    margin-top:10px;
+    margin-left:10px;
+    color:rgb(236, 111, 66);
+}
 
 .signup-container{
    margin-top:35px;
@@ -24,21 +33,6 @@ body{
 }
 .signup-image{
     flex:1;
-}
-.signup-logo{
-    top:0;
-    left:0;
-    position:fixed;
-    margin-left:10px;
-    margin-top:10px;
-    font-weight:bold;
-    font-size:17px;
-    transition: transform 0.3s;
-    cursor: pointer;
-}
-.signup-logo:hover{
-    transform:scale(1.1);
-    color: rgb(236, 111, 66);
 }
 .signup-header{
     display:flex;

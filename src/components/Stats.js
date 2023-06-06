@@ -41,7 +41,6 @@ const Stats = () => {
                 <PieChart data={goalsData} label="Goals" />
              </div>
         </div>
-        <Footer />
     </div>
   )
 }

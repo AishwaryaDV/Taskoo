@@ -1,8 +1,4 @@
-.notes-sidebar{
-    height:117vh;
-    border-right:1px solid rgb(228, 220, 220);
-    box-shadow: 3px 0 5px -5px rgba(0, 0, 0, 0.5);
-}
+
 .notes-section{
     display:flex;
     flex-direction:row;
@@ -17,7 +13,8 @@
 }
 .new-note-section{
     flex:1;
-    margin-top:-50px;
+    margin-top:-10px;
+    padding-left:20px;
 }
 .container{
     height:600px;

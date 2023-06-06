@@ -13,7 +13,7 @@ body{
     top:0;
     left:0;
     text-align:left;
-    padding-left:10px;
+    margin-left:30px;
     padding-top:10px;
     position:fixed;
     z-index:999;
@@ -24,6 +24,14 @@ body{
     cursor: pointer;
     width:100%;
     height:25px;
+}
+.taskoo-icon{
+    position:fixed;
+    cursor:pointer;
+    top:0;
+    left:0;
+    margin-top:10px;
+    margin-left:10px;
 }
 .landing-logo:hover{
     color: rgb(236, 111, 66);

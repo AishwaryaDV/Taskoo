@@ -6,6 +6,7 @@ import lottie from 'lottie-web'
 import {useNavigate} from 'react-router-dom'
 import Footer from './Footer'
 import {FaGithub} from 'react-icons/fa'
+import {FaTasks} from 'react-icons/fa'
 
 const Landing = (props) => {
     const navigate= useNavigate();
@@ -32,13 +33,13 @@ const navigateToURL = (url) => {
   return (
     <div className="landing-section">
         <header>
-          <div className="landing-logo" onClick={()=>navigate("/")}>Taskoo
+          <div className="landing-logo" onClick={()=>navigate("/")}><FaTasks size={17} className="taskoo-icon" />
             <div onClick={() => navigateToURL('https://github.com/AishwaryaDV/Taskoo')}>
               <FaGithub size={30} className="github-icon" />
             </div>
           </div>
         </header>
-        <div className="taskoo-header">Manage your daily tasks & everything with<span style={{display:'inline', marginLeft:'9px'}} className="taskoo-word">taskoo</span></div>
+        <div className="taskoo-header">Manage your daily tasks & everything with<span style={{display:'inline', marginLeft:'9px'}} className="taskoo-word">Taskoo</span></div>
         <div className="landing-container" ref={container}></div>
         <div className="taskboo-tagline">When you're overwhelmed by the amount of work you have on your plate , stop and rethink.</div>
         <button className="landing-page-btn" onClick={()=>navigate("/signup")}>Let's start</button>

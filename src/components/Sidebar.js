@@ -11,6 +11,7 @@ import {useNavigate} from 'react-router-dom'
 import {useState, useRef, useEffect} from 'react'
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
+import {FaTasks} from 'react-icons/fa'
 
 
 const Sidebar = () => {
@@ -49,12 +50,17 @@ const Sidebar = () => {
     // setCalendarVisible(!isCalendarVisible);
     // };
 
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+    const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+    };
     
   return (
     <div>
         <div className="sidebar-section">
         <header id="header">
-        <div className="landing-logo" onClick={()=>navigate("/")}>Taskoo
+        <div className="landing-logo" onClick={()=>navigate("/")}><FaTasks size={17} />
           <span className="username">Welcome, Username</span>
         </div>
         </header>
@@ -63,23 +69,32 @@ const Sidebar = () => {
             <span className="sidebar-icons" onClick={()=>navigate("/projects")}><ImFilesEmpty className="overview-icon" size={20} />Projects</span>
             <span className="sidebar-icons" onClick={()=>navigate("/notes")}><BsChatLeftHeart className="overview-icon" size={20} />Notes</span>
             <span className="sidebar-icons" onClick={()=>navigate("/stats")}><TfiStatsUp className="overview-icon" size={20} />Stats</span>
-            <div className="calendar-container">
-            <span className="sidebar-icons" onClick={toggleCalendar}><SlCalender className="overview-icon" size={20} />Calender</span>
             
-            {isOpen && (
-              <div className="calendar-popup">
-                <Calendar showNavigation={true} onChange={onChange} value={date} />
-              </div>
-            )}
+            <div className="calendar-container">
+                <span className="sidebar-icons" onClick={toggleCalendar}><SlCalender className="overview-icon" size={20} />Calender</span>
+                {isOpen && (
+                  <div className="calendar-popup">
+                    <Calendar showNavigation={true} onChange={onChange} value={date} />
+                  </div>
+                )}
 
-            {/* {isCalendarVisible && (
-              <div ref={calendarRef}>
-                <Calendar />
-              </div>
-            )} */}
-
+                {/* {isCalendarVisible && (
+                  <div ref={calendarRef}>
+                    <Calendar />
+                  </div>
+                )} */}
             </div>
-            <span className="sidebar-icons"><FiSettings className="overview-icon" size={20} />Settings</span>
+            <div className="dropdown-container">
+              <span className="sidebar-icons" onClick={toggleDropdown} style={{marginLeft:'-23px'}}><FiSettings className="overview-icon" size={20} />Settings</span>
+              {isDropdownOpen && (
+                  <ul className="dropdown-menu">
+                    <li>Change name</li>
+                    <li>Change password</li>
+                    <li>Delete account</li>
+                  </ul>
+              )}
+            </div>
+            
           </div>
         <div className="extra-sidebar-items">
             <span className="sidebar-icons"><BiExit className="overview-icon" size={20} />Log out</span>

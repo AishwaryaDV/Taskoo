@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import lottie from 'lottie-web'
 import Footer from './Footer'
-import Landing from './Landing'
+import {FaTasks} from 'react-icons/fa'
 
 const Signup = () => {
     const [isChecked, setIsChecked]= useState(false);
@@ -39,7 +39,7 @@ const Signup = () => {
         {isSignup ? (
             <div className="signup-content">
             <header>
-                <div className="signup-logo" onClick={()=>navigate("/")}>Taskoo</div>
+                <div className="signup-logo" onClick={()=>navigate("/")}><FaTasks size={17} className="taskoo-icon"/></div>
             </header>
             <div className="signup-header">Create your account & sign up</div>
             <br/>
