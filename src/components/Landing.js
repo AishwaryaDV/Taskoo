@@ -30,23 +30,17 @@ const navigateToURL = (url) => {
 };
     
   return (
-    <div>
+    <div className="landing-section">
         <header>
-          <div onClick={() => navigateToURL('https://github.com/AishwaryaDV/Taskoo')}>
-            <FaGithub size={30} className="github-icon" />
+          <div className="landing-logo" onClick={()=>navigate("/")}>Taskoo
+            <div onClick={() => navigateToURL('https://github.com/AishwaryaDV/Taskoo')}>
+              <FaGithub size={30} className="github-icon" />
+            </div>
           </div>
-          <div className="landing-logo" onClick={()=>navigate("/")}>Taskoo</div>
         </header>
         <div className="taskoo-header">Manage your daily tasks & everything with<span style={{display:'inline', marginLeft:'9px'}} className="taskoo-word">taskoo</span></div>
         <div className="landing-container" ref={container}></div>
         <div className="taskboo-tagline">When you're overwhelmed by the amount of work you have on your plate , stop and rethink.</div>
-        {/* <img className="play-button" src={PlayButton} alt="play button"/>
-        <div className="play-button-desc">
-            <span>How</span>
-            <div className="horizontal-line"></div>
-            <span className="span-element">taskoo</span>
-            <span>works</span>
-        </div> */}
         <button className="landing-page-btn" onClick={()=>navigate("/signup")}>Let's start</button>
         <Footer />
     </div>

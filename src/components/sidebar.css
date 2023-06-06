@@ -1,43 +1,68 @@
+.username{
+    color:black;
+    right:0;
+    top:0;
+    position:fixed;
+    padding-top:15px;
+    padding-right:0px;
+    font-size:14px;
+    
+}
+.landing-logo{
+    top:0;
+    left:0;
+    text-align:left;
+    padding-left:10px;
+    padding-top:10px;
+    position:fixed;
+    z-index:999;
+    background-color:white;
+    font-weight:bold;
+    font-size:16px;
+    transition: transform 0.3s;
+    cursor: pointer;
+    width:100%;
+    height:25px;
+}
 .overview-section{
     display:flex;
     flex-direction: row;
 }
 .sidebar-section{
     width:100%;
-    height:70vh;
     border-right:1px solid rgb(228, 220, 220);
-    box-shadow: 3px 0 5px -5px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 0 1px -15px rgba(0, 0, 0, 0.5);
 }
 .categories-section{
     flex:1;
 }
 span{
     display:block;
-    font-size:15px;
+    font-size:14px;
     font-weight:bold;
-    margin-bottom:20px;
+    margin-bottom:25px;
     margin-left:80px;
     text-align:left;
     cursor:pointer;
     margin-right:20px;
 }
 .main-sidebar-items{
-    margin-top:0px;
+    margin-top:10px;
     padding:0;
 }
 .extra-sidebar-items{
-    margin-top:380px;
+    margin-top:375px;
 }
 .overview-icon{
     margin-left:-50px;
     margin-right:10px;
-    padding:0;
+    margin-bottom:-4.3px;
 }
 .sidebar-icons{
-    color:grey;
+    color:black;
 }
 .sidebar-icons:hover{
-    color:black;
+    color:rgb(236, 111, 66);
 }
 #header{
     background-color: white;

@@ -2,6 +2,7 @@ import React from 'react'
 import PieChart from './PieChart'
 import Sidebar from './Sidebar'
 import './stats.css'
+import Footer from './Footer'
 
 const Stats = () => {
     const workData = [
@@ -40,6 +41,7 @@ const Stats = () => {
                 <PieChart data={goalsData} label="Goals" />
              </div>
         </div>
+        <Footer />
     </div>
   )
 }
