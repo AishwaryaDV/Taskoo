@@ -8,16 +8,19 @@ import Stats from './components/Stats';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 function App() {
+
   return (
     <div className="App">
       <Router>
         <Routes>
           <Route path="/" element={<Landing/>} />
           <Route path="/signup" element={<Signup/>} />
+
           <Route path="/overview" element={<Overview/>} />
           <Route path="/notes" element={<Notes/>} />
           <Route path="/projects" element={<Projects/>} />
           <Route path="/stats" element={<Stats/>} />
+          
         </Routes>
       </Router>
       

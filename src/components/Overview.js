@@ -89,7 +89,6 @@ const Overview = () => {
                 </div>
             </div>
         </div>
-        <Footer />
     </div>
   )
 }

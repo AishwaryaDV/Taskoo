@@ -56,7 +56,7 @@ body{
     margin-bottom:20px;
     border-color: rgb(176, 175, 175);
     border-radius:5px 5px 5px 5px;
-    border-width:thin;
+    border-width:0.5px;
     border-style:solid;
 }
 .email-header{
@@ -74,7 +74,7 @@ body{
     margin-bottom:20px;
     border-color: rgb(176, 175, 175);
     border-radius:5px 5px 5px 5px;
-    border-width:thin;
+    border-width:0.5px;
     border-style:solid;
 }
 .password-header{
@@ -91,7 +91,7 @@ body{
     margin-bottom:10px;
     border-color: rgb(176, 175, 175);
     border-radius:5px 5px 5px 5px;
-    border-width:thin;
+    border-width:0.5px;
     border-style:solid;
 }
 input::placeholder{
@@ -174,7 +174,7 @@ input[type='checkbox'] {
     margin-bottom:20px;
     border-color: rgb(176, 175, 175);
     border-radius:5px 5px 5px 5px;
-    border-width:thin;
+    border-width:0.5px;
     border-style:solid;
 }
 .login-password-header{
@@ -191,7 +191,7 @@ input[type='checkbox'] {
     margin-bottom:10px;
     border-color: rgb(176, 175, 175);
     border-radius:5px 5px 5px 5px;
-    border-width:thin;
+    border-width:0.5px;
     border-style:solid;
 }
 .login-btn{

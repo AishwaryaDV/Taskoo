@@ -1,0 +1,115 @@
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    font-size:13px;
+    font-weight:bold;
+    margin-left:-60px;
+  }
+  
+input[type='checkbox'] {
+    margin-right: 7px;
+
+  }
+
+.login-content{
+    flex:1;
+    margin-left:-30px;
+    margin-right:30px;
+    margin-top:-10px;
+    height:100%;
+    width:100%;
+}
+
+.login-logo{
+    top:0;
+    left:0;
+    position:fixed;
+    margin-left:10px;
+    margin-top:10px;
+    font-weight:bold;
+    font-size:17px;
+}
+.login-header{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    font-size:17px;
+    margin-top:170px;
+    margin-left:-40px;
+}
+.login-email-header{
+    font-size:14px;
+    font-weight:bold;
+    margin-left:-210px;
+    
+}
+.login-email-field{
+    height:25px;
+    width:290px;
+    margin-left:50px;
+    margin-top:5px;
+    cursor:pointer;
+    margin-bottom:20px;
+    border-color: rgb(176, 175, 175);
+    border-radius:5px 5px 5px 5px;
+    border-width:0.5px;
+    border-style:solid;
+}
+.login-password-header{
+    font-size:14px;
+    font-weight:bold;
+    margin-left:-180px;
+}
+.login-password-field{
+    height:25px;
+    width:290px;
+    margin-left:50px;
+    margin-top:5px;
+    cursor:pointer;
+    margin-bottom:10px;
+    border-color: rgb(176, 175, 175);
+    border-radius:5px 5px 5px 5px;
+    border-width:0.5px;
+    border-style:solid;
+}
+.login-btn{
+    height:35px;
+    width:130px;
+    cursor:pointer;
+    background-color:rgb(236, 111, 66);
+    color:white;
+    font-weight:bold;
+    font-size:16px;
+    border-radius: 5px 5px 5px 5px;
+    align-items:center;
+    justify-content:center;
+    border:none;
+    margin-left:100px;
+    margin-top:30px;
+    transition: transform 0.2s;
+}
+.login-btn:hover{
+    transform:scale(1.1);
+}
+.login-link{
+    margin-top:20px;
+    font-weight:bold;
+    font-size:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-left:45px;
+    color:rgb(45, 123, 207);
+ } 
+.signup-link{
+    margin-top:20px;
+    font-weight:bold;
+    font-size:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-left:42px;
+    color:rgb(45, 123, 207);
+}

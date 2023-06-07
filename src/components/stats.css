@@ -4,9 +4,6 @@
 }
 .stats-sidebar-section{
     flex:0.2;
-    width:100%;
-    border-right:1px solid rgb(228, 220, 220);
-    box-shadow: 3px 0 5px -5px rgba(0, 0, 0, 0.5);
 }
 .piecharts-section{
     flex:1;

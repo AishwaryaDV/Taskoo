@@ -28,33 +28,25 @@ const Sidebar = () => {
       setIsOpen(!isOpen);
     };
 
-    //new
-    // const [isCalendarVisible, setCalendarVisible] = useState(false);
-    // const calendarRef = useRef(null);
-
-    // useEffect(() => {
-    // const handleOutsideClick = (event) => {
-    //   if (calendarRef.current && !calendarRef.current.contains(event.target)) {
-    //     setCalendarVisible(false);
-    //   }
-    // };
-
-    // document.addEventListener('mousedown', handleOutsideClick);
-
-    // return () => {
-    //   document.removeEventListener('mousedown', handleOutsideClick);
-    // };
-    // }, []);
-
-    // const toggleCalendar = () => {
-    // setCalendarVisible(!isCalendarVisible);
-    // };
-
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
     const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
     };
+
+    // const handleLogout = () => {
+    //   Completely/permanently removes user data from local storage
+    //   localStorage.removeItem('user');
+    //   console.log("User data removed from local storage") 
+    // }
+
+    const handleLogout = () =>{
+      const storedUser = JSON.parse(localStorage.getItem('user'));
+      storedUser.isLoggedIn = false; // Update isLoggedIn to false
+      localStorage.setItem('user', JSON.stringify(storedUser));
+      console.log('User logged out');
+      window.location.href = '/';
+    }
     
   return (
     <div>
@@ -78,11 +70,6 @@ const Sidebar = () => {
                   </div>
                 )}
 
-                {/* {isCalendarVisible && (
-                  <div ref={calendarRef}>
-                    <Calendar />
-                  </div>
-                )} */}
             </div>
             <div className="dropdown-container">
               <span className="sidebar-icons" onClick={toggleDropdown} style={{marginLeft:'-23px'}}><FiSettings className="overview-icon" size={20} />Settings</span>
@@ -97,7 +84,7 @@ const Sidebar = () => {
             
           </div>
         <div className="extra-sidebar-items">
-            <span className="sidebar-icons"><BiExit className="overview-icon" size={20} />Log out</span>
+            <span className="sidebar-icons" onClick={handleLogout}><BiExit className="overview-icon" size={20} />Log out</span>
         </div>
         </div>
     </div>
