@@ -1,0 +1,60 @@
+.health-page{
+    display:flex;
+    flex-direction:row;
+}
+.health-sidebar-section{
+    flex:0.2;
+}
+.health-divs-section{
+    flex:1;
+    margin-top:60px;
+}
+.health-welcome-msg{
+    font-size:20px;
+    font-weight:bold;
+    text-align:left;
+    margin-left:50px;
+    margin-bottom:12px;
+}
+.pending-task-count{
+    font-weight:500;
+    text-align:left;
+    margin-left:50px;
+    font-size:16px;
+    color:grey;
+    margin-bottom:25px;
+}
+.scrollable-container {
+    display: flex;
+    flex-direction: column; /* Ensure a vertical layout */
+    max-height: 550px; /* Adjust the height as needed */
+    overflow-y: auto;
+  }
+  
+  .box {
+    width: 1000px;
+    min-height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color:white;
+    margin: 10px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    margin-left:50px;
+    padding-left:10px;
+    padding-right:10px;
+    padding-top:10px;
+    padding-bottom:10px;
+    font-size:14px;
+    font-weight:bold;
+  }
+  .tag{
+    font-size:11.5px;
+    margin-top:31px;
+    padding:0;
+    margin-left:-71px;
+    color: rgb(236, 111, 66);
+    cursor: pointer;
+  }
+  

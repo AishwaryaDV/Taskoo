@@ -5,6 +5,8 @@ import Overview from './components/Overview';
 import Notes from './components/Notes';
 import Projects from './components/Projects';
 import Stats from './components/Stats';
+import Work from './components/Work';
+import Health from './components/Health';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 function App() {
@@ -13,14 +15,14 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/" element={<Landing/>} />
-          <Route path="/signup" element={<Signup/>} />
-
-          <Route path="/overview" element={<Overview/>} />
-          <Route path="/notes" element={<Notes/>} />
-          <Route path="/projects" element={<Projects/>} />
-          <Route path="/stats" element={<Stats/>} />
-          
+          <Route path= "/" element={<Landing/>} />
+          <Route path= "/signup" element={<Signup/>} />
+          <Route path= "/overview" element={<Overview/>} />
+          <Route path= "/work" element={<Work />} />
+          <Route path= "/health" element={<Health />} />
+          <Route path= "/notes" element={<Notes/>} />
+          <Route path= "/projects" element={<Projects/>} />
+          <Route path= "/stats" element={<Stats/>} />
         </Routes>
       </Router>
       
