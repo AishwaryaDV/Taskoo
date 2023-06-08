@@ -75,7 +75,7 @@ const Signup = () => {
             const storedUser = JSON.parse(localStorage.getItem('user'));
             if (storedUser && storedUser.email === email && storedUser.password === password) {
             console.log('Login successful');
-            storedUser.isLoggedIn = true;
+            storedUser.isLoggedIn = true; 
             window.location.href='./overview';
 
             } else {

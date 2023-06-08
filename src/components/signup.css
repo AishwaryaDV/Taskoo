@@ -111,7 +111,7 @@ input::placeholder{
     align-items:center;
     justify-content:center;
     border:none;
-    margin-left:100px;
+    margin-left:50px;
     margin-top:30px;
     transition: transform 0.2s;
 }
@@ -206,7 +206,7 @@ input[type='checkbox'] {
     align-items:center;
     justify-content:center;
     border:none;
-    margin-left:100px;
+    margin-left:50px;
     margin-top:30px;
     transition: transform 0.2s;
 }

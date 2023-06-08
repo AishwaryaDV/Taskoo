@@ -47,13 +47,16 @@ const Sidebar = () => {
       console.log('User logged out');
       window.location.href = '/';
     }
+
+    const userData = JSON.parse(localStorage.getItem('user'));
+    const storedName = userData.name;
     
   return (
     <div>
         <div className="sidebar-section">
         <header id="header">
         <div className="landing-logo" onClick={()=>navigate("/")}><FaTasks size={17} />
-          <span className="username">Welcome, Username</span>
+          <span className="username">Welcome, {storedName}</span>
         </div>
         </header>
         <div className="main-sidebar-items">
