@@ -7,6 +7,7 @@ import Projects from './components/Projects';
 import Stats from './components/Stats';
 import Work from './components/Work';
 import Health from './components/Health';
+import Private from './components/Private';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path= "/overview" element={<Overview/>} />
           <Route path= "/work" element={<Work />} />
           <Route path= "/health" element={<Health />} />
+          <Route path= "/private" element={<Private/>} />
           <Route path= "/notes" element={<Notes/>} />
           <Route path= "/projects" element={<Projects/>} />
           <Route path= "/stats" element={<Stats/>} />

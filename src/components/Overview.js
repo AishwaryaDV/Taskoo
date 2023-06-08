@@ -70,11 +70,11 @@ const Overview = () => {
            </div>
 
             <div className="categories-lower-section">
-                <div className="private-section">
+                <div className="private-section" onClick={()=>navigate("/private")}>
                     <div className="private-section-header">Private</div>
                     <div className="container2" ref={container2}></div>
                 </div>
-                <div className="goals-section">
+                <div className="goals-section" onClick={()=>navigate("/goals")}>
                     <div className="goals-section-header">Goals</div>
                     <div className="container4" ref={container4}></div>
                 </div>
