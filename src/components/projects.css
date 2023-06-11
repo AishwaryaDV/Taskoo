@@ -1,0 +1,11 @@
+.project-section{
+    display:flex;
+    flex-direction:row;
+}
+.kanban-board-section{
+    flex:1;
+    margin-top:50px;
+}
+.project-sidebar-section{
+    flex:0.2;
+}
