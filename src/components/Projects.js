@@ -10,8 +10,13 @@ const Projects = () => {
     const [tasks, setTasks] = useState([]);
     console.log("Tasks", tasks);
 
-    useEffect(()=>{
-      setTasks(JSON.parse(localStorage.getItem("tasks")));
+    // useEffect(()=>{
+    //   setTasks(JSON.parse(localStorage.getItem("tasks")));
+    // }, []);
+
+    useEffect(() => {
+      const storedTasks = JSON.parse(localStorage.getItem("tasks"));
+      setTasks(storedTasks || []);
     }, []);
 
   return (
