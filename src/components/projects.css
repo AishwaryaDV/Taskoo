@@ -1,11 +1,87 @@
-.project-section{
+.projects-page{
     display:flex;
     flex-direction:row;
 }
-.kanban-board-section{
-    flex:1;
-    margin-top:50px;
-}
-.project-sidebar-section{
+.projects-sidebar-section{
     flex:0.2;
 }
+.projects-section{
+    flex:1;
+}
+
+/* kanban-section */
+.todo-container {
+    display: flex;
+    flex-direction:row;
+    margin-left:30px;
+    margin-top:80px;
+  }
+.kanban-header{
+    text-align:left;
+    margin-left:10px;
+  }
+
+.section-box {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    height:605px;
+    flex: 1; 
+    min-width: 0;
+    margin-right:30px;
+  }
+  
+.cards-container {
+    margin-bottom: 16px;
+  }
+  
+.add-card-btn {
+    height:30px;
+    width:340px;
+    margin-right:10px;
+    margin-left:10px;
+    border-radius: 4px;
+    border:none;
+    font-weight:bold;
+    background-color:rgb(236, 111, 66);
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+  }
+  
+.card {
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-right:10px;
+    margin-left:10px;
+    margin-top:10px;
+    cursor: move;
+  }
+  
+.section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-bottom: 16px;
+  }
+.card-input {
+    border: none;
+    outline: none;
+  }
+.card-count {
+    font-size: 14px;
+    color: white;
+    margin-left:310px;
+    margin-top:-21px;
+    padding:0;
+    background-color:rgb(236, 111, 66);
+    height:21px;
+    width:22px;
+    text-align:center;
+    padding-top:2px;
+    border-radius:50%;
+  }
+  
