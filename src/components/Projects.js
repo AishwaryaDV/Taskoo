@@ -2,12 +2,13 @@ import React from 'react';
 import './projects.css';
 import Sidebar from './Sidebar';
 import { useState } from 'react';
+import {FaTrashRestore} from 'react-icons/fa'
 
 const Projects = () => {
   const [cards, setCards] = useState([
-    { id: 1, text: "Add task", section: 0 },
-    { id: 2, text: "Add task", section: 0 },
-    { id: 3, text: "Add task", section: 0 }
+    { id: 1, text: "Add task", section: 0, tag: "" },
+    { id: 2, text: "Add task", section: 0, tag: ""},
+    { id: 3, text: "Add task", section: 0, tag: "" }
   ]);
 
   const handleDragStart = (event, card) => {
@@ -40,6 +41,16 @@ const Projects = () => {
     setCards(updatedCards);
   };
 
+  const handleCardTagChange = (event, cardId) => {
+    const updatedCards = cards.map((card) => {
+      if (card.id === cardId) {
+          return { ...card, tag: event.target.value };
+      }
+      return card;
+    });
+    setCards(updatedCards);
+  }
+
   const deleteCard = (cardId) => {
     const updatedCards = cards.filter((card) => card.id !== cardId);
     setCards(updatedCards);
@@ -47,7 +58,7 @@ const Projects = () => {
 
   const createNewCard = (section) => {
     const newCardId = cards.length + 1;
-    const newCard = { id: newCardId, text: `Add task`, section };
+    const newCard = { id: newCardId, text: `Add task`, section, tag: "" };
     setCards([...cards, newCard]);
   };
 
@@ -59,8 +70,7 @@ const Projects = () => {
     <div className="projects-page">
       <div className="projects-sidebar-section"><Sidebar /></div>
       <div className="projects-section">
-
-
+      <div className="projects-header">Projects</div>
       <div className="todo-container">
       <div
         className="section-box"
@@ -93,9 +103,19 @@ const Projects = () => {
                 <button
                   className="delete-card-btn"
                   onClick={() => deleteCard(card.id)}
-                >
-                  x
+                > <FaTrashRestore size={13}/>
                 </button>
+                <select
+                  type="text"
+                  value={card.tag || ''} // Ensure the value is an empty string if `card.tag` is undefined or null
+                  onChange={(event) => handleCardTagChange(event, card.id)}
+                  className="card-tag-input">
+                    <option value="">Select</option>
+                    <option value="Goals">Goals</option>
+                    <option value="Private">Private</option>
+                    <option value="Work">Work</option>
+                    <option value="Health">Health</option>
+                </select>
               </div>
             ))}
         </div>
@@ -131,9 +151,15 @@ const Projects = () => {
                 <button
                   className="delete-card-btn"
                   onClick={() => deleteCard(card.id)}
-                >
-                  x
+                ><FaTrashRestore size={13}/>
                 </button>
+                <input
+                  type="text"
+                  value={card.tag}
+                  onChange={(event) => handleCardTagChange(event, card.id)}
+                  className="card-tag-input"
+                  placeholder="Add tag"
+                />
               </div>
             ))}
         </div>
@@ -169,9 +195,15 @@ const Projects = () => {
                 <button
                   className="delete-card-btn"
                   onClick={() => deleteCard(card.id)}
-                >
-                  x
+                ><FaTrashRestore size={13}/>
                 </button>
+                <input
+                  type="text"
+                  value={card.tag}
+                  onChange={(event) => handleCardTagChange(event, card.id)}
+                  className="card-tag-input"
+                  placeholder="Add tag"
+                />
               </div>
             ))}
         </div>
