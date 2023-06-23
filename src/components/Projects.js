@@ -1,13 +1,17 @@
 import React from 'react';
 import './projects.css';
 import Sidebar from './Sidebar';
-import { useState } from 'react';
+import { useState, createContext } from 'react';
 import {FaTrashRestore} from 'react-icons/fa'
 
+//Creating a new context
+const ProjectContext = createContext();
+
 const Projects = () => {
+  //Defining state of cards
   const [cards, setCards] = useState([
     { id: 1, text: "Add task", section: 0, tag: "" },
-    { id: 2, text: "Add task", section: 0, tag: ""},
+    { id: 2, text: "Add task", section: 0, tag: "" },
     { id: 3, text: "Add task", section: 0, tag: "" }
   ]);
 
@@ -68,6 +72,7 @@ const Projects = () => {
 
   return (
     <div className="projects-page">
+      <ProjectContext.Provider value={cards}>
       <div className="projects-sidebar-section"><Sidebar /></div>
       <div className="projects-section">
       <div className="projects-header">Projects</div>
@@ -209,11 +214,11 @@ const Projects = () => {
         </div>
       </div>
     </div>
-
-
       </div>
+      </ProjectContext.Provider>
     </div>
   )
 }
 
-export default Projects
+export default Projects;
+export { ProjectContext };

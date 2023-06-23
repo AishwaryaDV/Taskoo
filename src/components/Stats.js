@@ -2,9 +2,8 @@ import React from 'react'
 import PieChart from './PieChart'
 import Sidebar from './Sidebar'
 import './stats.css'
-import Footer from './Footer'
 
-const Stats = () => {
+const Stats = ({cards}) => {
     const workData = [
         { name: 'To do', value: 4 },
         { name: 'In progress', value: 7 },
@@ -25,6 +24,10 @@ const Stats = () => {
         { name: 'In progress', value: 2 },
         { name: 'Completed', value: 5 }
       ];
+
+      if(!cards) {
+        return <div>No data available</div>;
+      }
     
   return (
     <div className="stats-section">
@@ -33,12 +36,18 @@ const Stats = () => {
         </div>
         <div className="piecharts-section">
             <div className="top-stats">
-                <PieChart data={workData} label="Work"/>
-                <PieChart data={healthData} label="Health" />
+                {/* <PieChart data={workData} label="Work"/>
+                <PieChart data={healthData} label="Health" /> */}
+                 Hello 1
+                 {cards.map((card) => (
+                 <div key={card.id}>{card.text}</div>
+                 ))}
+
             </div>
             <div className="bottom-stats">
-                <PieChart data={privateData} label="Private"/>
-                <PieChart data={goalsData} label="Goals" />
+                {/* <PieChart data={privateData} label="Private"/>
+                <PieChart data={goalsData} label="Goals" /> */}
+                Hello 2
              </div>
         </div>
     </div>

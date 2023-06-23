@@ -8,13 +8,17 @@ import {SlCalender} from 'react-icons/sl'
 import {FiSettings} from 'react-icons/fi'
 import {BiExit} from 'react-icons/bi'
 import {useNavigate} from 'react-router-dom'
-import {useState, useRef, useEffect} from 'react'
+import {useState, useContext} from 'react'
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
-import {FaTasks} from 'react-icons/fa'
+import {FaTasks} from 'react-icons/fa';
+import {ProjectContext} from './Projects';
+import Stats from './Stats';
 
 
 const Sidebar = () => {
+   //Access cards data from ProjectContext created isnide of Projects.js
+    const cards = useContext(ProjectContext);
    
     const navigate= useNavigate();
     const [date, setDate] = useState(new Date());
@@ -50,6 +54,14 @@ const Sidebar = () => {
 
     const userData = JSON.parse(localStorage.getItem('user'));
     const storedName = userData.name;
+
+    const [showStats, setShowStats] = useState(false);
+
+    const handleClick = () => {
+      setShowStats(!showStats);
+      navigate('/stats'); // Perform navigation when clicked
+    };
+
     
   return (
     <div>
@@ -63,8 +75,19 @@ const Sidebar = () => {
             <span className="sidebar-icons" onClick={()=>navigate("/overview")}><BsHouseGear className="overview-icon" size={20} />Overview</span>
             <span className="sidebar-icons" onClick={()=>navigate("/projects")}><ImFilesEmpty className="overview-icon" size={20} />Projects</span>
             <span className="sidebar-icons" onClick={()=>navigate("/notes")}><BsChatLeftHeart className="overview-icon" size={20} />Notes</span>
-            <span className="sidebar-icons" onClick={()=>navigate("/stats")}><TfiStatsUp className="overview-icon" size={20} />Stats</span>
+            {/* <span className="sidebar-icons" onClick={()=>navigate("/stats")}><TfiStatsUp className="overview-icon" size={20} />Stats</span> */}
             
+           {/* trying stats render  */}
+            <span className="sidebar-icons" onClick={handleClick}>
+            <TfiStatsUp className="overview-icon" size={20} />
+            Stats
+           </span>
+           {showStats && <Stats cards={cards}/>}
+
+
+
+
+
             <div className="calendar-container">
                 <span className="sidebar-icons" onClick={toggleCalendar}><SlCalender className="overview-icon" size={20} />Calender</span>
                 {isOpen && (
